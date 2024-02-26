@@ -1,7 +1,18 @@
 #!/bin/bash
 
-echo "Script de Escaneo de Vulnerabilidades con OpenVAS"
-echo "-------------------------------------------------"
+# Función para mostrar el banner
+mostrar_banner() {
+    echo -e "\e[1;36m"
+    echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    echo "+       Escaneo de Vulnerabilidades con OpenVAS        +"
+    echo "+------------------------------------------------------+"
+    echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    echo -e "\e[0m"
+}
+
+# Inicio del script
+mostrar_banner
+
 
 read -p "Ingresa la dirección IP del objetivo: " target_ip
 read -p "Ingresa el puerto del servicio (ej. 80 para HTTP): " target_port
